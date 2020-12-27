@@ -1,19 +1,8 @@
 {                    
-    "外傘頂洲": {
-        "id": "outunbrralla",
-        "latitude": 23.5,
-        "longitude": 120,
-        "text": {
-            "position": "left",
-            "content": "外傘頂洲, 23.5, 120"
-        },
-        "tooltip":{
-            "content": "<span style=\"font-weight:bold\">tooltip test</span><br>這裡是23.5, 120</br>"
-        }
-    },
     "case1": {
         "latitude": 22.665537, 
         "longitude": 120.548754, 
+        "href":"../html/cases/Pingdong.html",
         "text": {
             "position": "left",
             "content": "屏東運動休閒園區迫遷案"
@@ -25,6 +14,7 @@
     "case2": {
         "latitude": 25.0576, 
         "longitude": 121.2312, 
+        "href":"../html/cases/Taoyuan.html",
         "text": {
             "position": "top",
             "content": "桃園航空城土地徵收案"
@@ -36,6 +26,7 @@
     "case3": {
         "latitude": 25.000959, 
         "longitude": 121.445242, 
+        "href":"../html/cases/DaGuan.html",
         "text": {
             "position": "bottom",
             "content": "大觀社區迫遷案"

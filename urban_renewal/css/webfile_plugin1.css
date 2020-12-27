@@ -30,7 +30,7 @@ button {
     height: 50px;
 }
 
-.container {
+.map-container {
     width: 100%;
     overflow: hidden;
     min-width: 700px;
@@ -57,7 +57,7 @@ button {
     border-radius: 5px;
     padding: 10px;
     z-index: 1000;
-    max-width: 200px;
+    max-width: 400px;
     display: none;
     color: #232323;
 }
@@ -74,29 +74,29 @@ button {
     border-width: 2px;
     border-radius: 8px;
 
-    min-width: 500px;
     /* if width < 500, enter mobile mod  */
-    width: 100%;
     max-width: 900px;
-    min-height: 400px;
-    height: 100%;
     max-height: 900px;
+    width: 100%;
+    /* padding-top: 100%; 1:1 Aspect Ratio */
 }
 
 /* For all zoom buttons */
 .mapael .zoomButton {
+    font-family: monospace ;
     background-color: rgb(124, 124, 124);
     border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
     color: rgb(255, 255, 255);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     line-height: 30px;
+    line-break: loose;
     text-align: center;
     cursor: pointer;
     position: absolute;
-    font-size: x-large;
-    font-weight: 800;
+    font-size: 30px;
+    font-weight: lighter;
     left: 10px;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -112,12 +112,12 @@ button {
 
 /* Then Zoom In button */
 .mapael .zoomIn {
-    top: 50px;
+    top: 55px;
 }
 
 /* Then Zoom Out button */
 .mapael .zoomOut {
-    top: 90px;
+    top: 100px;
 }
 
 .mapael .zoomButton:hover {
@@ -161,9 +161,10 @@ button {
 }
 
 .caseintro-close {
-    position: relative;
-    top: 10px;
-    left: 10px;
+    fill: #232323;
+    position: absolute;
+    top: 20px;
+    right: 36px;
     width: 32px;
     height: 32px;
     z-index: 10;
@@ -171,4 +172,8 @@ button {
 
 .caseintro-close:hover {
     background-color: #b7b7b7;
+}
+
+.wellcome {
+    z-index: 1000;
 }

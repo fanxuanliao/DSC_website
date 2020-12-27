@@ -1,67 +1,63 @@
-///////////////////動畫/////////////////////
+"use strict";
 
-function set_body_height() { // set body height = window height
-    $('body').height($(window).height());
+///////////////////動畫/////////////////////
+function set_body_height() {
+  // set body height = window height
+  $('body').height($(window).height());
 }
 
 function TriggerExcavator() {
-    $(".excavator").toggleClass('hidden');
+  $(".excavator").toggleClass('hidden');
 }
 
-$(document).ready(function() {
-    $(".mapael .map").hide();
-    $("nav").hide();
-    // $(".container").hide();
-    $(window).bind('resize', set_body_height);
-        set_body_height();
+$(document).ready(function () {
+  $(".mapael .map").hide();
+  $("nav").hide(); // $(".container").hide();
 
-    let clicktimes = 0;
-    
-    let cnv = document.getElementById('cnv'), //canvas
-    ctx = cnv.getContext('2d'); //canvas 2d 可使用的attr, method
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
-    
-    let bgImg = new Image();
-    bgImg.src = './material/ground0.png';
-    bgImg.onload = function() {
-        ctx.drawImage(bgImg, 0, 0,cnv.width,cnv.height); // drawImage(img, x, y ,w ,h)
+  $(window).bind('resize', set_body_height);
+  set_body_height();
+  var clicktimes = 0;
+  var cnv = document.getElementById('cnv'),
+      //canvas
+  ctx = cnv.getContext('2d'); //canvas 2d 可使用的attr, method
+
+  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+  var bgImg = new Image();
+  bgImg.src = './material/ground0.png';
+
+  bgImg.onload = function () {
+    ctx.drawImage(bgImg, 0, 0, cnv.width, cnv.height); // drawImage(img, x, y ,w ,h)
+  };
+
+  $("canvas").click(function () {
+    if (clicktimes <= 5) {
+      if (clicktimes % 2 == 1) {
+        bgImg.src = "./material/ground" + (clicktimes + 1) / 2 + ".png";
+        $("img").attr("left", "(80%, 0)");
+        console.log($("img").attr("left"));
+      } else {
+        $("img").attr("left", "(40%,0)");
+      }
+
+      TriggerExcavator();
+      clicktimes++;
+    } else {
+      $("img").css('display', 'none');
+      $("canvas").css('display', 'none'); // $("img").hide();
+      // $("canvas").hide();
+
+      $(".mapael .map").show();
+      $("nav").show(); // $(".container").show();
     }
-
-    $("canvas").click(function() {
-        if (clicktimes<=5) {
-            if (clicktimes%2==1) {
-                bgImg.src = "./material/ground"+((clicktimes+1)/2)+".png";
-                $("img").attr("left", "(80%, 0)");
-                console.log($("img").attr("left"));
-            } else {
-                $("img").attr("left", "(40%,0)");   
-            }
-            TriggerExcavator();
-            clicktimes++;
-        } else {
-            $("img").css('display', 'none');
-            $("canvas").css('display', 'none');
-           // $("img").hide();
-           // $("canvas").hide();
-            $(".mapael .map").show();
-            $("nav").show();
-           // $(".container").show();
-        }
-    });
-});
-
-
-
-///////////////////地圖/////////////////////
-
+  });
+}); ///////////////////地圖/////////////////////
 // $(document).ready(function() {
 // var caseintro = $("#caseintro-main");
 //        var caseintro = document.getElementById("caseintro-main");
 //         var closeintro = document.getElementById("close");
 //         var testbtn = document.getElementById("testbtn");
 //         var casecontent = testbtn = document.getElementById("caseintro-content");
-    
 //         var intro_reveal = function(){
 //             caseintro.style.display = "block";
 //             $("#caseintro-content").load("case1"+".html");
@@ -69,33 +65,24 @@ $(document).ready(function() {
 //         var intro_close = function(){
 //             caseintro.style.display = "none";
 //         };
-    
 //         closeintro.onclick = intro_close;
-    
 //         let k = document.getElementsByTagName('data-id')[0];
 //         console.log(k);
-
 //         //-----------------------------
-
 //         console.log($.browser);
 //         console.log($.browser.name);
-
 //         //-----------------------------
 //         //mapeal
-
 //         var loading = {"areas": {}, "legends": {}, "plots":{}};
 //         var pathjson = ["./dataset/dataset_area1.json", "./dataset/dataset_legend1.json", "./dataset/dataset_plot1.json"];
 //         var loading2 = ["areas", "legends", "plots"];
 //         // var loading3 = [mapealdata.areas, mapealdata.legends, mapealdata.plots];
-
 //         console.log("The pathjson has", pathjson, Object.keys(pathjson).length);
 //         console.log("The loading2 has", loading2);
-
 //         function process() {
 //             if ($.browser.name == "msie") {
 //                 // WHY YOU STILL USE IE???
 //                 // for those old explorer
-
 //                 console.log("IS THIS A IE????");        
 //                 for (var i=0; i<Object.keys(pathjson).length; i++) {
 //                     (function (i) {
@@ -140,19 +127,14 @@ $(document).ready(function() {
 //         process();
 //         //hint: getJSON has a problem in for-loop which, 
 //         //please use "let" instead of "var".
-
 //         //Due to "let" make var. locally exist in current block and will recreate in each iteration,
 //         //and "var" make var. exist globally exist and will corrupt each iteration,
 //         //this made var. directly become the value of end of loop
 //         //getJSON will only get the such latest value of var.,
 //         //and there is an unwanted output.
-
 //         var selectcontent = [];
-
-
 //         console.log("width: ", window.innerWidth);
 //         console.log("height: ", window.innerHeight);
-
 //         //set the data of mapeal
 //         var mapealdata = {
 //             map: {
@@ -224,7 +206,6 @@ $(document).ready(function() {
 //                 }
 //             }
 //         }
-
 //         setTimeout(() => $(function () {
 //             //loading check
 //             console.log("Ground control to mapeal");
@@ -237,7 +218,6 @@ $(document).ready(function() {
 //             console.log("areas:", mapealdata.areas);
 //             console.log("legend:", mapealdata.legend);
 //             console.log("plots:", mapealdata.plots);
-
 //             // Mapael initialisation
 //             $(".twmap").mapael(mapealdata);
 //         }, 200));

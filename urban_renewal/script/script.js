@@ -10,6 +10,7 @@ function TriggerExcavator() {
  
 $(document).ready(function() {
     $(".mapael .map").hide();
+    $("nav").hide();
     // $(".container").hide();
     $(window).bind('resize', set_body_height);
         set_body_height();
@@ -47,6 +48,7 @@ $(document).ready(function() {
            // $("img").hide();
            // $("canvas").hide();
            $(".mapael .map").show();
+           $("nav").show();
            // $(".container").show();
         }
     });

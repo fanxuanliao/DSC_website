@@ -1,0 +1,299 @@
+// cssreset
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}
+
+a {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+//variables
+$background-primary:#1E1F21;
+$background-secondary:#27292D;
+
+$color-primary:#c1851f;
+$color-muted: #a7a7a7;
+$color-light:#fff;
+
+//通用的class
+* {
+    box-sizing: border-box;
+}
+
+.bg-primary {
+    background-color: $background-primary;
+}
+
+.bg-secondary {
+    background-color: $background-secondary;
+}
+
+.color-primary {
+    color: $color-primary;
+}
+
+.color-secondary {
+    color: $background-secondary;
+}
+
+.color-light {
+    color: $color-light;
+}
+
+.color-muted {
+    color: $color-muted;
+}
+
+//flex基礎設定
+.d-flex {
+    display: flex;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.jcse {
+    justify-content: space-evenly;
+}
+
+//控制寬度範圍的container
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+//用於區塊間距
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+nav {
+    width: 100%;
+
+    .menu {
+        padding: 8px;
+
+        li+li {
+            padding-left: 16px;
+        }
+
+        a {
+            color: $color-light;
+            text-decoration: none;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+        #socialHouse {
+            position: relative;
+            &:hover{
+                .menu-inside {
+                    display: block;
+                }
+            }
+        }
+        #urbanRenewal {
+            position: relative;
+            &:hover{
+                .menu-inside {
+                    display: block;
+                }
+            }
+        }
+        &-inside {
+            position: absolute;
+            display: none;
+            top:100%;
+            padding:8px;
+            width: 101%;
+            z-index: 1;
+            border-radius: 5px;
+            li+li {
+                padding:16px 0 0;
+                border-top: 2px solid $color-light;
+            }
+        }
+    }
+
+}
+
+.footer {
+    padding: 4px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+@mixin bgParallax() {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@mixin poaFull() {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.d-none{
+    display: none;
+}

@@ -1,0 +1,82 @@
+.indextest {
+    .header {
+        margin-top: 60px;
+        padding: 60px 0;
+        position: relative;
+        &::after {
+            content: "";
+            @include poaFull;
+            @include bgParallax;
+            background-image: url('../img/S__54689814.jpg');
+            background-position: center 30px;
+            z-index: -1;
+            filter:grayscale(1) brightness(.6);
+        }
+        &-menu {
+            li {
+                width: 600px;
+                font-size: 36px;
+                text-align: center;
+                position: relative;
+                background-image: url('../img/building_button.png');
+                @include bgParallax;
+                background-attachment: scroll;
+                img {
+                    max-width: 120%;
+                    height: auto
+                }
+                a {
+                    color: $color-light;
+                    padding: 100px;
+                    text-decoration: none;
+                }
+                &:hover {
+                    transform: translateY(-5px);
+                    color:$color-primary;
+                }
+            }
+        }
+        h1 {
+            width: 40%;
+            margin: 0 auto;
+            font-size: 96px;
+            text-align: center;
+            font-weight: bolder;
+            border-bottom: 8px solid $color-primary;
+        }
+    }
+
+    .arrow {
+        font-size: 96px;
+        justify-content: center;
+    }
+
+    .foreword {
+        width: 100%;
+        height: 100vh;
+        font-size: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .graphic {
+        position: relative;
+        height: 100vh;
+        &-img{
+            filter: grayscale(.9) brightness(.5);
+            @include bgParallax;
+            @include poaFull;
+        }
+        &-text {
+            text-align: center;
+            height: 72px;
+            @include poaFull;
+            margin: auto;
+            font-size: 72px;
+        }
+    }
+
+
+
+}

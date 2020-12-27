@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> webfile_ver2 </title>
+    
+    <!-- icon and css -->
+    <link rel="stylesheet" href="./css/webfile_plugin1.css">
+
+    <!-- mod import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="https://rawgit.com/neveldo/jQuery-Mapael/master/js/jquery.mapael.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js" charset="utf-8"></script>
+    
+    <!-- map file -->
+    <script src="./pakage/twmapdot1_mapeal.js" charset="utf-8"></script>
+    <script src="./script/script.js"></script>
+    </head>
+
+    <body>
+            <canvas id="cnv"></canvas>
+<img  class="hidden excavator" id="down" src="material/excavator_down.png">
+    <img  class="excavator" src="material/excavator_up.png">
+    <div class="container">
+        <div class="twmap mapael">
+            <div class="map" id="mapframe">
+				<object type="image/svg+xml" src="./twmapdot3.svg">
+                    you shouldn't see this line, if you do, please refresh the web.
+                    this line is made to check whether svg loaded successfully.
+                    Since it's behind it.
+					<!-- so, this indent is made to put a object as svg -->
+				</object>
+                <div class="mapTooltip" style="display: none; left: -1000px; top: -1000px;">
+                </div>
+                <div class="zoomButton zoomReset" title="Reset zoom"></div>
+                <div class="zoomButton zoomIn" title="Zoom in"></div>
+                <div class="zoomButton zoomOut" title="Zoom out"></div>
+            </div>
+
+            <div class="caseintro" id="caseintro-main" style="display: none;">
+                <div class="caseintro-close" id="close"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x" viewBox="3 3 10 10" style="cursor: pointer">
+                        <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+                <div class="caseintro-content" id="caseintro-content">
+                    case intro test 外傘頂洲
+                </div>
+            </div>
+
+        </div>
+        <button>Redirect to main page</button>
+    </div>
+
+
+    <!-- main web work -->
+    <script type="text/javascript">
+        //-----------------------------
+        //caseintro
+        
+        var caseintro = document.getElementById("caseintro-main");
+        var closeintro = document.getElementById("close");
+        var testbtn = document.getElementById("testbtn");
+        var casecontent = testbtn = document.getElementById("caseintro-content");
+    
+        var intro_reveal = function(){
+            caseintro.style.display = "block";
+            $("#caseintro-content").load("./subpage/case1"+".html");
+        };
+        var intro_close = function(){
+            caseintro.style.display = "none";
+        };
+    
+        closeintro.onclick = intro_close;
+    
+        let k = document.getElementsByTagName('data-id')[0];
+        console.log(k);
+
+        //-----------------------------
+
+        console.log($.browser);
+        console.log($.browser.name);
+
+        //-----------------------------
+        //mapeal
+
+        var loading = {"areas": {}, "legends": {}, "plots":{}};
+        var pathjson = ["./dataset/dataset_area1.json", "./dataset/dataset_legend1.json", "./dataset/dataset_plot1.json"];
+        var loading2 = ["areas", "legends", "plots"];
+        // var loading3 = [mapealdata.areas, mapealdata.legends, mapealdata.plots];
+
+        console.log("The pathjson has", pathjson, Object.keys(pathjson).length);
+        console.log("The loading2 has", loading2);
+
+        function process() {
+            if ($.browser.name == "msie") {
+                // WHY YOU STILL USE IE???
+                // for those old explorer
+
+                console.log("IS THIS A IE????");        
+                for (var i=0; i<Object.keys(pathjson).length; i++) {
+                    (function (i) {
+                        $.getJSON(pathjson[i], function(obj) {
+                            console.log("start loading...");
+                            loading[loading2[i]] = obj;
+                            console.log(obj);
+                            console.log(i, loading[loading2[i]]);
+                            console.log(loading2[i] + " is loading from " + pathjson[i] + " ...");
+                        })
+                        .done(function() {
+                            console.log(loading2[i] + " loaded successfully\n" + "##########");
+                            loading3[i] = true;
+                        })
+                        .fail(function() {
+                            console.log(loading2[i] + " has error occur\n" + "!!!!!!!!!!");
+                        });
+                    })(i);
+                }
+            } else {
+                for (let i=0; i<Object.keys(pathjson).length; i++) {
+                    $.ajax({
+                        type: 'GET',
+                        url: pathjson[i],
+                        dataType: 'json',
+                        success: function (obj) {
+                            console.log("start loading...");
+                            loading[loading2[i]] = obj;
+                            //loading3[i] = obj;
+                            console.log(obj);
+                            console.log(i, loading[loading2[i]]);
+                            console.log(loading2[i] + " is loading from " + pathjson[i] + " ...");
+                            console.log(loading2[i] + " loaded successfully\n" + "##########");
+                        },
+                        error: function() {
+                        console.log(loading2[i] + " has error occur\n" + "!!!!!!!!!!");
+                        }
+                    });
+
+                    // $.getJSON(pathjson[i], function(obj) {
+                    //     console.log("start loading...");
+                    //     loading[loading2[i]] = obj;
+                    //     console.log(obj);
+                    //     console.log(i, loading[loading2[i]]);
+                    //     console.log(loading2[i] + " is loading from " + pathjson[i] + " ...");
+                    // })
+                    // .done(function() {
+                    //     console.log(loading2[i] + " loaded successfully\n" + "##########");
+                    //     loading3[i] = true;
+                    // })
+                    // .fail(function() {
+                    //     console.log(loading2[i] + " has error occur\n" + "!!!!!!!!!!");
+                    // })
+                };
+            }
+        }
+        process();
+        //hint: getJSON has a problem in for-loop which, 
+        //please use "let" instead of "var".
+
+        //Due to "let" make var. locally exist in current block and will recreate in each iteration,
+        //and "var" make var. exist globally exist and will corrupt each iteration,
+        //this made var. directly become the value of end of loop
+        //getJSON will only get the such latest value of var.,
+        //and there is an unwanted output.
+
+        var selectcontent = [];
+
+
+        console.log("width: ", window.innerWidth);
+        console.log("height: ", window.innerHeight);
+
+        //set the data of mapeal
+        var mapealdata = {
+			map: {
+                name: "twmapdot1_mapeal", 
+                defaultArea: {
+                    attrs: {
+                        fill: "#7c7c7c",
+                        stroke: "#fff", "stroke-width": 1.0,
+                        cursor: "pointer"
+                    }, attrsHover: {
+                        fill: "#B7B7B7",
+                        stroke: "#fff", "stroke-width": 2.0
+                    }, eventHandlers: {
+                        click: function (e, id) {
+                            //when you click, do following setting
+                            $(".twmap").trigger('zoom', {
+                                area: id,
+                                areaMargin: 50
+                            });
+                        }
+                    }
+                }, defaultPlot: {
+                    attrs: {
+                        fill: "#ffa000",
+                        stroke: "#fff", "stroke-width": 1.0,
+                        cursor: "pointer"
+                    }, attrsHover: {
+                        fill: "#ffa000",
+                        stroke: "#fff", "stroke-width": 2.0
+                    }, text: {
+                        attrs: {
+                            fill: "#b4b4b4",
+                            "font-weight": "normal",
+                            "font-size": "20px"
+                        }, attrsHover: {
+                            fill: "#fff",
+                            "font-weight": "bold"
+                        }
+                    }, eventHandlers:{
+                        click: function (e) {
+                            caseintro.style.display = "block";
+                            //console.log(e);
+                            //console.log(id);
+                            console.log(e.currentTarget.dataset["id"]); //外傘頂洲
+                            $(function() {$("#caseintro-content").load("./subpage/"+[e.currentTarget.dataset["id"]]+".html");})
+                        }
+                    }
+                }, zoom: {
+                    enabled: true,
+                    step: 0.25,
+                    maxLevel: 20
+                }
+            },
+            legend: {},
+			areas: {},
+            plots: {
+                // "外傘頂洲": {
+                //     "id": "outunbrralla",
+                //     "latitude": 23.5, //緯度
+                //     "longitude": 120, //經度
+                //     "text": {
+                //         "position": "left",
+                //         "content": "外傘頂洲, 23.5, 120"
+                //     },
+                //     "tooltip":{
+                //         "content": "<span style=\"font-weight:bold\">tooltip test</span><br>這裡是23.5, 120</br>"
+                //     }
+                // }
+            }
+        }
+
+        setTimeout(() => $(function () {
+            //loading check
+            console.log("1");
+            console.log("Ground control to mapeal");
+            //Loading the json data into specific var. on mapeal 
+            mapealdata.areas = loading["areas"];
+            mapealdata.legend = loading["legends"];
+            mapealdata.plots = loading["plots"];
+            //data loading check
+            console.log("This is mapeal to ground control");
+            console.log("areas:", mapealdata.areas);
+            console.log("legend:", mapealdata.legend);
+            console.log("plots:", mapealdata.plots);
+
+            // Mapael initialisation
+            $(".twmap").mapael(mapealdata);
+        }, 200));
+    </script>
+
+</body></html>

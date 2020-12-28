@@ -1,7 +1,8 @@
 ///////////////////動畫/////////////////////
 
 function set_body_height() { // set body height = window height
-    $('body').height($(window).height());
+    // $('body').height($(window).height());
+    $('body').height(window.innerHeight);
 }
 
 function TriggerExcavator() {
@@ -11,6 +12,7 @@ function TriggerExcavator() {
 $(document).ready(function() {
     $(".mapael .map").hide();
     $("nav").hide();
+    $(".footer").hide();
     // $(".container").hide();
     $(window).bind('resize', set_body_height);
         set_body_height();
@@ -42,10 +44,30 @@ $(document).ready(function() {
         } else {
             $("img").css('display', 'none');
             $("canvas").css('display', 'none');
-           // $("img").hide();
-           // $("canvas").hide();
             $(".mapael .map").show();
             $("nav").show();
+            $(".footer").show();
+           // $(".container").show();
+        }
+    });
+
+    $("img").click(function() {
+        if (clicktimes<=5) {
+            if (clicktimes%2==1) {
+                bgImg.src = "./material/ground"+((clicktimes+1)/2)+".png";
+                $("img").attr("left", "(80%, 0)");
+                console.log($("img").attr("left"));
+            } else {
+                $("img").attr("left", "(40%,0)");   
+            }
+            TriggerExcavator();
+            clicktimes++;
+        } else {
+            $("img").css('display', 'none');
+            $("canvas").css('display', 'none');
+            $(".mapael .map").show();
+            $("nav").show();
+            $(".footer").show();
            // $(".container").show();
         }
     });

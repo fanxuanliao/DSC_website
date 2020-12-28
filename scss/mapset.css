@@ -2,8 +2,9 @@
     opacity: 0;
 }
 
-img {
-    z-index: 2;
+.excavator {
+    cursor: pointer;
+    z-index: 999;
     position: fixed;
     top: 25%;
     left: 40%;
@@ -174,6 +175,6 @@ button {
     background-color: #b7b7b7;
 }
 
-.wellcome {
+/*.wellcome {
     z-index: 1000;
-}
+}*/

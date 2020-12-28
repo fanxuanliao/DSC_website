@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/8e7fb7d8d3.js' crossorigin='anonymous'></script>
+    <title>居住正義</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://kit.fontawesome.com/8e7fb7d8d3.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./scss/all.css">
+</head>
+
+
+<body class="indextest bg-primary color-light">
+    <nav class="bg-secondary mb-60" id="nav">
+        <div class="container">
+            <ul class="menu d-flex">
+                <li><a href="index.html">首頁</a></li>
+                <li id="socialHouse">
+                    社會住宅
+                    <ul class="menu-inside bg-secondary">
+                        <li><a href="./html/issues/selfpay.html">財務自償</a></li>
+                        <li><a href="./html/issues/crimeRate.html">犯罪率</a></li>
+                        <li><a href="./html/issues/discrimination.html">居住歧視</a></li>
+                    </ul>
+                </li>
+                <li id="urbanRenewal">
+                    都更個案
+                    <ul class="menu-inside bg-secondary">
+                        <li><a href="./html/cases/DaGuan.html">大觀社區</a></li>
+                        <li><a href="./html/cases/Pingdong.html">屏東</a></li>
+                        <li><a href="./html/cases/Taoyuan.html">桃園</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <a class="arrow-up" href="#nav" title="點我跳轉至上方">
+        <i class="fas fa-angle-double-up"></i>
+    </a>
+    <div class="container">
+        <div class="header mb-60">
+            <ul class="header-menu d-flex jcse mb-60">
+                <li>
+                    <a href="./urban_renewal/main.html">都更</a>
+                </li>
+                <li>
+                    <a href="https://weihua9217.github.io/DSC_WebGame/">遊戲</a>
+                </li>
+                <li>
+                    <a href="./Social_Housing/socialhousing.html">社宅</a>
+                </li>
+            </ul>
+            <h1>
+                居住正義
+            </h1>
+        </div>
+        <div class="arrow d-flex mb-60 color-primary">
+            <i class="far fa-arrow-alt-circle-down"></i>
+        </div>
+        <div class="foreword">
+            <span data-aos="fade-down">你是否曾經想過...</span>
+        </div>
+        <div class="mb-60 graphic">
+            <div class="graphic-img" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500"
+                style="background-image: url('./img/S__54689826.jpg');"></div>
+            <div class="graphic-img" style="background-image: url('../img/S__54689826.jpg');"></div>
+            <p class="graphic-text" data-aos="zoom-in">
+                買一棟房子要花多少錢?
+            </p>
+        </div>
+        <div class="mb-60 graphic">
+            <div class="graphic-img" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500"
+                style="background-image: url('./img/protest2.jpg');"></div>
+            <div class="graphic-img" style="background-image: url('../img/protest2.jpg');"></div>
+            <p class="graphic-text" data-aos="zoom-in">
+                你現在住的房子會不會有一天就被徵收走了？
+            </p>
+        </div>
+        <div class="mb-60 graphic">
+            <div class="graphic-img" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500"
+                style="background-image: url('https://s.newtalk.tw/album/news/123/5ae2f3e53e0c4.jpg');"></div>
+            <div class="graphic-img"
+                style="background-image: url('https://s.newtalk.tw/album/news/123/5ae2f3e53e0c4.jpg');"></div>
+            <p class="graphic-text" data-aos="zoom-in">
+                你知道什麼是社會住宅嗎？
+            </p>
+        </div>
+        <p class="foreword">為了有一個家<br>要付出多少努力？</p>
+
+        <div class="graphic">
+            <div class="graphic-img" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500"
+                style="background-image: url('./img/S__54689816.jpg');"></div>
+            <div class="graphic-img" style="background-image: url('../img/S__54689816.jpg');"></div>
+            <p class="graphic-text">
+                那些不公義的事情
+            </p>
+        </div>
+        <div class="mb-60 graphic">
+            <div class="graphic-img" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500"
+                style="background-image: url('./img/S__54689816.jpg');"></div>
+            <div class="graphic-img" style="background-image: url('../img/S__1212427.jpg');"></div>
+            <p class="graphic-text" data-aos="zoom-in">
+                發生在台灣的角落 <br> 或是就發生在你我身上
+            </p>
+        </div>
+        <p class="foreword">關於... <span data-aos="fade-down" data-aos-delay="500">居住的那些黑暗面</span></p>
+    </div>
+    <div class="footer bg-secondary color-muted">
+        <div class="container d-flex jcsb">
+            <div class="footer-logo">居住正義</div>
+            <div class="footer-copyright">@copyright-NCCU DSC Group of Web</div>
+        </div>
+    </div>
+    <script src="../dropdown.js"></script>
+    <script>
+        AOS.init();
+        $(function () {
+            $('.textOnImg').scroll();
+        });
+    </script>
+</body>
+
+</html>

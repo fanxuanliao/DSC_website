@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社宅</title>
+<link rel="stylesheet" type="text/css" href="styles.css"> 
+<link rel="stylesheet" href="../scss/all.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body class="socialhousing bg-primary color-light">
+        <nav class="bg-secondary mb-60">
+                <div class="container">
+                    <ul class="menu d-flex">
+                        <li><a href="../index.html">首頁</a></li>
+                        <li id="socialHouse">
+                            社會住宅
+                            <ul class="menu-inside bg-secondary">
+                                <li><a href="../html/issues/selfpay.html">財務自償</a></li>
+                                <li><a href="../html/issues/crimeRate.html">犯罪率</a></li>
+                                <li><a href="../html/issues/discrimination.html">居住歧視</a></li>
+                            </ul>
+                        </li>
+                        <li id="urbanRenewal">
+                            都更個案
+                            <ul class="menu-inside bg-secondary">
+                                <li><a href="../html/cases/DaGuan.html">大觀社區</a></li>
+                                <li><a href="../html/cases/Pingdong.html">屏東</a></li>
+                                <li><a href="../html/cases/Taoyuan.html">桃園</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+<img id="playButton1" src='pictures/snail shell brown.png'alt='pic1'/>
+<img id="playButton2" src='pictures/snail shell green-01.png'alt='pic2'/>
+<img id="playButton3" src='pictures/snail shell red.png'alt='pic3'/>
+<div class="box"></div>
+<div id="instruction"style="position:absolute;left:50px;">請點選任一蝸牛殼<br>讓蝸牛可以順利<br>找到它的家</div>
+<script type="text/javascript" src="move.js/move.js"></script>
+<script src=”https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js”></script>
+<script type="text/javascript">
+
+document.getElementById('playButton1').onclick = function(e){
+        move('.box').x(-135).y(85).end();
+        console.log(1)
+        document.getElementById("object1").style.display = "block"; 
+        document.getElementById("text1").style.display = "block"; 
+        document.getElementById("text2").style.display = "none"; 
+        document.getElementById("text3").style.display = "none"; 
+};
+document.getElementById('playButton2').onclick = function(e){
+        move('.box').x(-255).y(-65).end();
+        console.log(2)
+        document.getElementById("object2").style.display = "block";
+        document.getElementById("text1").style.display = "none"; 
+        document.getElementById("text2").style.display = "block"; 
+        document.getElementById("text3").style.display = "none";  
+};
+document.getElementById('playButton3').onclick = function(e){
+        move('.box').x(-55).y(-165).end();
+        console.log(3)
+        document.getElementById("object3").style.display = "block"; 
+        document.getElementById("text1").style.display = "none"; 
+        document.getElementById("text2").style.display = "none"; 
+        document.getElementById("text3").style.display = "block"; 
+};
+</script>
+<div id="object1" style="display:none; position:absolute; right:100px; top:100px;">
+        <img src='pictures/snail shell brown.png' width="100px"/>
+</div>
+<div id="object2" style="display:none; position:absolute; right:100px; top:200px;">
+        <img src='pictures/snail shell green-01.png' width="100px"/>
+</div>
+<div id="object3" style="display:none; position:absolute; right:100px; top:300px;">
+        <img src='pictures/snail shell red.png' width="100px"/>
+</div>
+<div id="text1" style="display:none;position:absolute;right:250px;top:70px;">
+        <h2 class="mb-30 color-primary"style="font-size:25px;">大觀社區迫遷案</h2>
+        <li>大觀社區建於民國45年，前身為全台第一個創立的眷村「婦聯第一村」的福利中心。</li>
+        <li>民國52年，颱風重創該福利中心，福利中心因此遷往他處，但原本居住於福利中心的居民並沒有隨之遷移，選擇在原址安定下來，成為大觀社區。</li>
+        <li>民國55年，在居民不知情的情況下，大觀社區所處土地被變更為「國有土地」且移交陸軍總司令部管理，後續轉交中華民國國軍退除役官兵輔導委員會管理。</li>
+        <li>民國83年，台北縣政府通過板橋市浮洲地區都市計畫，將大觀社區所屬地納入都更範圍。</li>
+        <li>民國99年，國軍退除役官兵輔導委員會板橋榮譽國民之家對大觀社區居民提出民事訴訟，要求其拆遷房屋、歸還國有土地。</li><br>
+        <p>大觀社區居民於民國105年成立「大觀事件自救會」，開始長達三年的抗爭。早期訴求為原地續住、檢討國土活化法規、去除不當得利污名等。
+        抗爭行動包含凱達格蘭大道陳情、突襲佔領國軍退除役官兵輔導委員會且噴漆、民主進步黨中央黨部表演抗議行動劇、總統府前碎磚排列「厝」字並呼籲修正法規歷史錯誤等。
+        國軍退除役官兵輔導委員會陸續提出包租代管、原地安置和社會住宅等安置方案。居民最後同意搬遷，但也呼籲相關單位提出更有效的安置措施。</p>
+</div>
+<div id="text2" style="display:none;position:absolute;right:250px;top:70px;">
+        <h2 class="mb-30 color-primary"style="font-size:25px;">屏東運動休閒園區迫遷案</h2>
+                108年9月10號，行政院正式拍板定案高鐵南延案，而屏東縣政府為配合此項政策，根據前瞻基礎建設計畫，選中屏東市凌雲里的雲鵬段地號989，以建設屏東運動休閒產業園區，並在此興建棒球場、停車場等設施作為國際運動比賽場地，然而卻引起當地居民強烈的反彈。
+                事實上該地為國有地，於日治時期開始便被規劃為軍事用地，2017年以前隸屬於國防部底下，而後被轉移至財政部國有財產署，又再居民不知情的情況下，於今年2月初撥給屏東縣政府。
+                雖說雲鵬段為國有軍事用地，但當地大多數居民都未曾繳交過租金，政府也並未強迫繳交，因此長年以來雲鵬段的用途是住家地，並有多座居民開發的魚塭、農田等。<br><br>
+                今年6月縣政府開始就計畫案進行查估，縣政府預計今年底完成徵收土地、設計場地等工作，於明年開始施工。多數居民認為縣政府這項都更提案有損於居民權益，有居民就提出國有財產法施行細則第26 條提及之公用財產用途廢止的五種情況(符合其一就可)：
+                <li>原定用途或事業目的消滅者。</li>
+                <li>原使用機關裁撤而無接替機關者。</li>
+                <li>未依預定計畫及規定用途或事業目的使用已逾一年者。</li>
+                <li>原定用途之時限屆滿者。</li>
+                <li>其他基於事實情況無繼續使用必要者。</li>
+                其認為，雲鵬段原定用途為軍事用地，但其原定用途早已消滅，各項情況皆符合，所以不應繼續做為國有地，期盼能公地放領給民眾做使用。
+                另外，也有多數民眾認為建設運動休閒產業園區並不符合效益，頂多是多個蚊子館，屏東居民並不受惠，應將經費用於整修先前老舊的建設。
+</div>
+<div id="text3" style="display:none;position:absolute;right:250px;top:70px;">
+        <h2 class="mb-30 color-primary"style="font-size:25px;">桃園航空城土地徵收案</h2>
+                桃園航空城為台灣史上最大的土地徵收案，涉及交通規劃、土地開發、都市設計與景觀、基礎公共設施規劃及財務分析等多面向專業整合。
+                航空城都市計畫面積4,564公頃，其中「機場專用區」1,731公頃、「自由貿易港區」109公頃、「產業專用區」563公頃、「商業區」322公頃、「住宅區」558公頃；另劃設所需公園、道路、廣場等公共設施用地共977公頃。桃園市政府於109年11月9日已發布土地徵收公告，將桃園航空城開發案區內人民土地收歸國有，進入實質徵收階段，並提出十大優惠方案。
+                許多不合理之處引發爭議
+                <li>區域徵收法規本身的爭議，詳情：《區域徵收》此書。</li>
+                <li>本次徵收中，徵收價格遠低於權狀不足30坪的小坪數建物，價值不足配回安置街廓最小單位者、徵收補償費也不足購買最小坪數，差額地價或房價可減輕20％，以8折加購不足的坪數，會使徵收戶負債，更無法還他們一個家。</li>
+                <li>桃園市政府共10年未依法行政，未按營造物價指數調整建築物改良物補償評點基準，10年後微調至10.1元，再微調至109年的12.1元，違反誠信原則，修惡補償條例，坑殺人民權益。</li>
+                <li>桃園市政府於108年3月29日發出開會通知單於108年4月8日召集所有議員、市府各相關局處，修訂「桃園市興辦公共工程建築改良物拆遷補償標準」，該修正草案修法方向原比照新北市政策，明載納入「雜項工作物及固定設備裝潢基準」、「建築物主要結構樓層加成表」，以及「評點單價提高至14.8」。孰料之後竟將前列補償內容逕自剔除，評點單價降低為12.1，嚴重坑殺人民財產權，導致人民負債重建。</li>
+                <li>桃園市航空城區段徵收案為「自償性」開發，不會排擠市府預算，不會花納稅人一毛錢，反而是政府跟徵收戶「圈地」、「低價收地」、「高價賣地」。有明顯圖利財團之實。</li>
+</div>
+</body>
+</html>

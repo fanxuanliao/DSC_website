@@ -1,0 +1,56 @@
+
+.box {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    background-image: url('pictures/snail.png');
+    background-size: 100% 100%;
+    /* background: #7C9DD4; */
+    }
+#playButton1 {
+    position: absolute;
+    left: 170px;
+    top: 350px;
+    width: 200px;
+    height: 200px;
+    /* display: block;
+    font-size: 20px;
+    margin: 30px 30px;
+    font-weight: bold;
+    color: #222; */
+    }
+#playButton2 {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+    /* display: block;
+    font-size: 20px;
+    margin: 30px 30px;
+    font-weight: bold;
+    color: #222; */
+    }
+#playButton3 {
+    position: absolute;
+    left: 250px;
+    top: 100px;
+    width: 200px;
+    height: 200px;
+    /* display: block;
+    font-size: 20px;
+    margin: 30px 30px;
+    font-weight: bold;
+    color: #222; */
+    }
+#text1, #text2, #text3{
+    color: ghostwhite;
+    font-size: 15px;
+    /* background-color: darkgrey; */
+    width: 500px;
+    
+    
+}

@@ -1,0 +1,60 @@
+.case {
+    position: relative;
+
+    .banner {
+        position: relative;
+        height: 700px;
+        align-items: flex-end;
+        &-img{
+            @include bgParallax;
+            @include poaFull;
+            filter: grayscale(1) brightness(.6);
+            z-index: -1;
+
+        }
+        &-text {
+            font-size: 80px;
+            width: 980px;
+            margin: 0 auto 30px;
+            padding-left: 8px;
+            border-left: 9px solid $color-primary
+        }
+    }
+
+    .swiper {
+        padding: 16px;
+
+        &-container {
+            width: 100%;
+        }
+
+        &-slide {
+            width: 50%;
+            min-height: 500px;
+            @include bgParallax;
+            background-attachment: scroll;
+        }
+
+        a {
+            color: lightblue;
+            display: inline-block;
+        }
+    }
+
+    .article {
+        h2 {
+            font-size: 36px;
+        }
+
+        ol {
+            padding-left: 20px;
+            list-style: decimal;
+
+            li {
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+}

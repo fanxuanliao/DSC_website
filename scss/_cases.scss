@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .case {
     position: relative;
 
@@ -16,26 +15,11 @@
         &-text {
             font-size: 80px;
             width: 980px;
-=======
-.case{
-    position: relative;
-    .banner{
-        background-image: url('../img/protest.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        height: 700px;
-        align-items: flex-end;
-        &-text{
-            font-size: 80px;
-            width:980px;
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
             margin: 0 auto 30px;
             padding-left: 8px;
             border-left: 9px solid $color-primary
         }
     }
-<<<<<<< HEAD
 
     .swiper {
         padding: 16px;
@@ -67,30 +51,6 @@
             list-style: decimal;
 
             li {
-=======
-    .swiper{
-        padding: 16px;
-        &-container{
-            width: 100%;
-        }
-
-        &-slide{
-            width: 50%;
-            min-height: 500px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-        }
-    }
-    .article{
-        h2{
-            font-size: 36px;
-        }
-        ol{
-            padding-left: 20px;
-            list-style: decimal;
-            li{
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
                 margin-bottom: 10px;
                 padding-left: 10px;
             }

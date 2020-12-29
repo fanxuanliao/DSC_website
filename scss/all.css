@@ -396,7 +396,7 @@ nav .menu-inside li + li {
   font-size: 72px;
   display: -webkit-box;
   display: -ms-flexbox;
-  /* display: flex; */
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -456,6 +456,12 @@ nav .menu-inside li + li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .indextest .header-menu li {
+    width: 300px;
+  }
+  .indextest .header-menu li a {
+    padding: 50px;
   }
 }
 

@@ -1,5 +1,4 @@
 .indextest {
-<<<<<<< HEAD
     .arrow-up {
         position: fixed;
         right: -10%;
@@ -24,64 +23,38 @@
             }
         }
     }
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
     .header {
         margin-top: 60px;
         padding: 60px 0;
         position: relative;
-<<<<<<< HEAD
-
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
         &::after {
             content: "";
             @include poaFull;
             @include bgParallax;
-<<<<<<< HEAD
             background-image: url('../img/S__54689815.jpg');
             background-position: center 30px;
             z-index: -1;
             filter: grayscale(1) brightness(.6);
         }
 
-=======
-            background-image: url('../img/S__54689814.jpg');
-            background-position: center 30px;
-            z-index: -1;
-            filter:grayscale(1) brightness(.6);
-        }
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
         &-menu {
             li {
                 width: 600px;
                 font-size: 36px;
                 text-align: center;
-<<<<<<< HEAD
                 background-image: url('../img/building_button.png');
                 @include bgParallax;
                 background-attachment: scroll;
 
-=======
-                position: relative;
-                background-image: url('../img/building_button.png');
-                @include bgParallax;
-                background-attachment: scroll;
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
                 img {
                     max-width: 120%;
                     height: auto
                 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
                 a {
                     color: $color-light;
                     padding: 100px;
                     text-decoration: none;
                 }
-<<<<<<< HEAD
 
                 &:hover {
                     transform: translateY(-5px);
@@ -90,14 +63,6 @@
             }
         }
 
-=======
-                &:hover {
-                    transform: translateY(-5px);
-                    color:$color-primary;
-                }
-            }
-        }
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
         h1 {
             width: 40%;
             margin: 0 auto;
@@ -125,17 +90,12 @@
     .graphic {
         position: relative;
         height: 100vh;
-<<<<<<< HEAD
 
         &-img {
-=======
-        &-img{
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
             filter: grayscale(.9) brightness(.5);
             @include bgParallax;
             @include poaFull;
         }
-<<<<<<< HEAD
 
         &-img::after {
             position: absolute;
@@ -147,8 +107,6 @@
             box-shadow: 0 0 50px 30px #333 inset;
         }
 
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
         &-text {
             text-align: center;
             height: 72px;
@@ -157,7 +115,6 @@
             font-size: 72px;
         }
     }
-<<<<<<< HEAD
     @media (max-width:780px) {
         .arrow-up{
             display: none;
@@ -165,10 +122,13 @@
         .foreword{
             flex-direction: column;
         }
+        .header-menu li{
+            width: 300px;
+            a{
+                padding: 50px;
+            }
+        }
     }
-=======
-
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
 
 
 }

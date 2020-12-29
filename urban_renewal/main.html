@@ -416,7 +416,7 @@
             };
         }
     }
-    process();
+    // process();
     //hint: getJSON has a problem in for-loop which, 
     //please use "let" instead of "var".
 
@@ -520,9 +520,9 @@
         //loading check
         console.log("Ground control to mapeal");
         //Loading the json data into specific var. on mapeal 
-        // mapealdata.areas = loading["areas"];
+        mapealdata.areas = loading["areas"];
         mapealdata.legend = loading["legends"];
-        // mapealdata.plots = loading["plots"];
+        mapealdata.plots = loading["plots"];
         //data loading check
         console.log("This is mapeal to ground control");
         console.log("areas:", mapealdata.areas);

@@ -279,7 +279,6 @@ nav .menu-inside li + li {
   display: none;
 }
 
-<<<<<<< HEAD
 .indextest .arrow-up {
   position: fixed;
   right: -10%;
@@ -322,8 +321,6 @@ nav .menu-inside li + li {
   }
 }
 
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
 .indextest .header {
   margin-top: 60px;
   padding: 60px 0;
@@ -341,11 +338,7 @@ nav .menu-inside li + li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-<<<<<<< HEAD
   background-image: url("../img/S__54689815.jpg");
-=======
-  background-image: url("../img/S__54689814.jpg");
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
   background-position: center 30px;
   z-index: -1;
   -webkit-filter: grayscale(1) brightness(0.6);
@@ -356,10 +349,6 @@ nav .menu-inside li + li {
   width: 600px;
   font-size: 36px;
   text-align: center;
-<<<<<<< HEAD
-=======
-  position: relative;
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
   background-image: url("../img/building_button.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -407,7 +396,7 @@ nav .menu-inside li + li {
   font-size: 72px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  /* display: flex; */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -435,7 +424,6 @@ nav .menu-inside li + li {
   right: 0;
 }
 
-<<<<<<< HEAD
 .indextest .graphic-img::after {
   position: absolute;
   content: '';
@@ -447,8 +435,6 @@ nav .menu-inside li + li {
           box-shadow: 0 0 50px 30px #333 inset;
 }
 
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
 .indextest .graphic-text {
   text-align: center;
   height: 72px;
@@ -461,7 +447,6 @@ nav .menu-inside li + li {
   font-size: 72px;
 }
 
-<<<<<<< HEAD
 @media (max-width: 780px) {
   .indextest .arrow-up {
     display: none;
@@ -474,28 +459,18 @@ nav .menu-inside li + li {
   }
 }
 
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
 .case {
   position: relative;
 }
 
 .case .banner {
-<<<<<<< HEAD
   position: relative;
-=======
-  background-image: url("../img/protest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
   height: 700px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
 
-<<<<<<< HEAD
 .case .banner-img {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -511,8 +486,6 @@ nav .menu-inside li + li {
   z-index: -1;
 }
 
-=======
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
 .case .banner-text {
   font-size: 80px;
   width: 980px;
@@ -532,7 +505,6 @@ nav .menu-inside li + li {
 .case .swiper-slide {
   width: 50%;
   min-height: 500px;
-<<<<<<< HEAD
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -543,11 +515,6 @@ nav .menu-inside li + li {
 .case .swiper a {
   color: lightblue;
   display: inline-block;
-=======
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
->>>>>>> 86d0479aabb2e4ef750f914753c6b8b20f49f238
 }
 
 .case .article h2 {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | DSC</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/新增資料夾.json", {onProgress: UnityProgress});
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/8e7fb7d8d3.js' crossorigin='anonymous'></script>
+    <title>居住正義</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://kit.fontawesome.com/8e7fb7d8d3.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../scss/all.css"                                                                            >
+  </head>
+  <body class="indextest bg-primary color-light">
+    <nav class="bg-secondary mb-60">
+        <div class="container">
+            <ul class="menu d-flex">
+                <li><a href="../index.html">首頁</a></li>
+                <li id="socialHouse">
+                    社會住宅
+                    <ul class="menu-inside bg-secondary">
+                        <li><a href="../html/issues/selfpay.html">財務自償</a></li>
+                        <li><a href="../html/issues/crimeRate.html">犯罪率</a></li>
+                        <li><a href="../html/issues/discrimination.html">居住歧視</a></li>
+                    </ul>
+                </li>
+                <li id="urbanRenewal">
+                    都更個案
+                    <ul class="menu-inside bg-secondary">
+                        <li><a href="../html/cases/DaGuan.html">大觀社區</a></li>
+                        <li><a href="../html/cases/Pingdong.html">屏東</a></li>
+                        <li><a href="../html/cases/Taoyuan.html">桃園</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 800px; height: 450px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">DSC</div>
+      </div>
+    </div>
+    <div class="footer bg-secondary color-muted">
+        <div class="container d-flex jcsb">
+            <div class="footer-logo">居住正義</div>
+            <div class="footer-copyright">@copyright-NCCU DSC Group of Web</div>
+        </div>
+    </div>
+  </body>
+</html>

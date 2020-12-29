@@ -39,13 +39,11 @@
 
         &-menu {
             li {
-                width: 600px;
                 font-size: 36px;
                 text-align: center;
-                background-image: url('../img/building_button.png');
                 @include bgParallax;
                 background-attachment: scroll;
-
+                background-size: contain;
                 img {
                     max-width: 120%;
                     height: auto
@@ -61,15 +59,31 @@
                     color: $color-primary;
                 }
             }
+            .social{
+                background-image: url('../img/social.png');
+
+            }
+            .game{
+                background-image: url('../img/game.png');
+
+            }
+            .urban{
+                background-image: url('../img/urban.png');
+
+            }
         }
 
         h1 {
-            width: 40%;
+            width: 50%;
             margin: 0 auto;
-            font-size: 96px;
-            text-align: center;
-            font-weight: bolder;
             border-bottom: 8px solid $color-primary;
+            background-image: url(".././img/title.png") ;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 60px 0;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
         }
     }
 

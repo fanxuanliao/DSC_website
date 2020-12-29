@@ -346,15 +346,14 @@ nav .menu-inside li + li {
 }
 
 .indextest .header-menu li {
-  width: 600px;
   font-size: 36px;
   text-align: center;
-  background-image: url("../img/building_button.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: scroll;
+  background-size: contain;
 }
 
 .indextest .header-menu li img {
@@ -374,13 +373,29 @@ nav .menu-inside li + li {
   color: #c1851f;
 }
 
+.indextest .header-menu .social {
+  background-image: url("../img/social.png");
+}
+
+.indextest .header-menu .game {
+  background-image: url("../img/game.png");
+}
+
+.indextest .header-menu .urban {
+  background-image: url("../img/urban.png");
+}
+
 .indextest .header h1 {
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
-  font-size: 96px;
-  text-align: center;
-  font-weight: bolder;
   border-bottom: 8px solid #c1851f;
+  background-image: url(".././img/title.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .indextest .arrow {
